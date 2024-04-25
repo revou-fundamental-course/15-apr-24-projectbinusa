@@ -18,39 +18,78 @@
       <section>
         <h1>Kalkulator Konversi Suhu</h1>
         <p class="note">
-          Masukan suhu derajat Celcius (&deg;C) ke kotak di bawah, lalu klik
-          tombol Konversi untuk mendapatkan hasil konversi dalam bentuk
+          Masukan suhu yang Anda pilih derajat Celcius (&deg;C) atau dejarat
+          Fahrenheit (&deg;F) ke dalam form di bawah, lalu klik tombol Konversi
+          untuk mendapatkan hasil konversi dalam bentuk Celcius (&deg;C) atau
           Fahrenheit (&deg;F).
         </p>
-        <form id="temperatureForm">
-          <div>
-            <label for="celciusInput">Celcius (&deg;C) :</label>
+        <!-- Celcius ke Fahrenheit -->
+        <div class="ctof" id="ctof">
+          <form id="temperatureForm">
+            <div>
+              <label for="celciusInput">Celcius (&deg;C) :</label>
+              <br />
+              <textarea
+                id="celciusInput"
+                name="celciusInput"
+                cols="30"
+                rows="4"
+                placeholder="Masukan Nilai"
+              ></textarea>
+            </div>
             <br />
-            <textarea
-              id="celciusInput"
-              name="celciusInput"
-              cols="30"
-              rows="4"
-              placeholder="Masukan Nilai"
-            ></textarea>
+            <div>
+              <label for="fahrenheitOutput">Fahrenheit (&deg;F) :</label>
+              <br />
+              <textarea
+                id="fahrenheitOutput"
+                name="fahrenheitOutput"
+                cols="30"
+                rows="4"
+                placeholder="Hasil Konversi"
+                readonly
+              ></textarea>
+            </div>
+          </form>
+          <div class="btn">
+            <button id="convertButton">Konversi</button>
+            <button id="resetButton">Reset</button>
+            <button id="reverseButton">Reverse</button>
           </div>
-          <br />
-          <div>
-            <label for="fahrenheitOutput">Fahrenheit (&deg;F) :</label>
+        </div>
+        <!-- Fahrenheit ke Celcius -->
+        <div class="ftoc" id="ftoc">
+          <form id="temperatureForm1">
+            <div>
+              <label for="fahrenheitInput">Fahrenheit (&deg;F) :</label>
+              <br />
+              <textarea
+                id="fahrenheitInput"
+                name="fahrenheitInput"
+                cols="30"
+                rows="4"
+                placeholder="Masukan Nilai"
+              ></textarea>
+            </div>
             <br />
-            <textarea
-              id="fahrenheitOutput"
-              name="fahrenheitOutput"
-              cols="30"
-              rows="4"
-              placeholder="Masukan Nilai"
-            ></textarea>
+            <div>
+              <label for="fahrenheitOutput">Celcius (&deg;C) :</label>
+              <br />
+              <textarea
+                id="celciusOutput"
+                name="celciusOutput"
+                cols="30"
+                rows="4"
+                placeholder="Hasil Konversi"
+                readonly
+              ></textarea>
+            </div>
+          </form>
+          <div class="btn">
+            <button id="convertButton1">Konversi</button>
+            <button id="resetButton1">Reset</button>
+            <button id="reverseButton1">Reverse</button>
           </div>
-        </form>
-        <div class="btn">
-          <button id="convertButton">Konversi</button>
-          <button id="resetButton">Reset</button>
-          <button id="reverseButton">Reverse</button>
         </div>
       </section>
 
@@ -62,14 +101,15 @@
           <textarea
             id="calculationTextarea"
             name="calculationTextarea"
-            cols="92"
             rows="10"
             readonly
+            placeholder="Proses Pengerjaan"
           ></textarea>
         </form>
+        <p style="text-align: center; font-size: smaller">
+          &copy; RevoU 2024 by Roihan
+        </p>
       </section>
-
-      <a href="">Fahrenheit (&deg;F) ke Celcius (&deg;C)</a>
     </div>
 
     <script src="./js/script.js"></script>
